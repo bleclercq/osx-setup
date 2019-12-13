@@ -2,4 +2,4 @@ language: bash
 os: osx
 osx_image: xcode11.2
 script:
-- "./test_brew_installation.sh"
+- "./test_brew_cask_installation.sh"
