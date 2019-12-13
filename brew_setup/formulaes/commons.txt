@@ -1,0 +1,9 @@
+wget
+git
+node
+ruby
+python
+go
+mas
+zsh
+zsh-syntax-highlighting
