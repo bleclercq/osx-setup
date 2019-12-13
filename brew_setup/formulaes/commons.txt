@@ -1,9 +1,9 @@
-wget
 git
-node
-ruby
-python
 go
 mas
+node
+python
+ruby
+wget
 zsh
 zsh-syntax-highlighting

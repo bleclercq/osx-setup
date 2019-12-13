@@ -8,7 +8,7 @@ function brew_fetch_list() {
     for item in "${list_of_brews[@]}"; do
         fetch+="brew fetch "$item" & "
     done
-    final_fetch="${fetch::${#fetch}-2}"
+    final_fetch="${fetch%??}"
     eval $final_fetch
 }
 
@@ -18,6 +18,6 @@ function brew_cask_fetch_list() {
     for item in "${list_of_cask[@]}"; do
         fetch+="brew cask fetch "$item" & "
     done
-    final_fetch="${fetch::${#fetch}-2}"
+    final_fetch="${fetch%??}"
     eval $final_fetch
 }
