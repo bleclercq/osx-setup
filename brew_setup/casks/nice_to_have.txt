@@ -1,3 +1,5 @@
 spotify
 vlc
+atom
+sublime-text
 microsoft-office
