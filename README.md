@@ -11,18 +11,11 @@ This project aims to provide every basic tools through a single script.
 
 ## Usage
 
-Clone this repository
-
 ```bash
-git clone https://github.com/bleclercq/osx-setup
-```
-
-```bash
-chmod +x brew_installation.sh
-```
-
-```bash
-./brew_installation.sh
+$ git clone https://github.com/bleclercq/osx-setup
+$ cd brew_setup
+$ chmod +x brew_installation.sh
+$ ./brew_installation.sh
 ```
 
 Enjoy
