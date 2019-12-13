@@ -1,0 +1,17 @@
+iterm2
+sublime-text
+virtualbox
+charles
+visual-studio-code
+github
+postman
+atom
+keybase
+1password
+authy
+google-drive-file-stream
+slack
+zoomus
+google-chrome
+firefox
+google-cloud-sdk
