@@ -12,4 +12,3 @@ slack
 zoomus
 google-chrome
 firefox
-google-cloud-sdk
