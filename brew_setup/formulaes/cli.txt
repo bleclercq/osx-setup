@@ -1,5 +1,5 @@
 awscli
 azure-cli
 htop
-watch
 tree
+watch

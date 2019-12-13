@@ -1,5 +1,5 @@
 consul
-terraform
 nomad
-vault
 packer
+terraform
+vault
