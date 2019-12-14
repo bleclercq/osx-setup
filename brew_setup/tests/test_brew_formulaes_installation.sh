@@ -14,5 +14,5 @@ for item in "${formulaes_array[@]}"; do
         echo fail
         exit 1
     fi
-echo success
 done
+echo success
