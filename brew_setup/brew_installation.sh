@@ -1,7 +1,6 @@
 #!/bin/bash
 
 GREEN="\033[0;32m"
-ORANGE="\033[0;33m"
 RED="\033[0;31m"
 COLOR_RESET="\033[0m"
 
@@ -17,7 +16,9 @@ brew update
 brew upgrade
 
 update_os_x_apps
+echo -e "${GREEN}Installing formulaes${COLOR_RESET}"
 formulaes_fetch_and_install
+echo -e "${GREEN}Installing casks${COLOR_RESET}"
 casks_fetch_and_install
 
 raw_list_of_nice_to_have_casks=$(cat ./casks/nice_to_have.txt | tr "\n" " ")

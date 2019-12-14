@@ -5,7 +5,7 @@ ORANGE="\033[0;33m"
 RED="\033[0;31m"
 COLOR_RESET="\033[0m"
 
-function update_os_x_apps() {
+function update_os_x_apps {
     mas signout
     os_x_version=$(sw_vers -productVersion)
     last_os_x_working_mas_signin=10.13.0
@@ -27,8 +27,8 @@ function update_os_x_apps() {
     if [[ $apple_account == "y" ]]; then
         :
     else
-        echo -e "${RED}Make sure to create an apple account before launching this script."
-        echo -e "${RED}You can create an account using the App Store, already installed on this Mac."
+        echo -e "${RED}Make sure to create an apple account before launching this script.${COLOR_RESET}"
+        echo -e "${RED}You can create an account using the App Store, already installed on this Mac.${COLOR_RESET}"
         exit 1
     fi
 
@@ -36,9 +36,9 @@ function update_os_x_apps() {
     # {...%.*} allow to convert xx.xx.xx into a float to make a comparison using bc
     result=`bc -l <<< "${os_x_version%.*}>${last_os_x_working_mas_signin%.*}"`
     if [ result ]; then
-        echo "Your Mac version is too high (check here for more details: https://github.com/mas-cli/mas/issues/164)"
-        echo "Please login using the App Store interface"
-        echo "Come back here when it's done, this script is waiting for you."
+        echo -e "${ORANGE}Your Mac version is too high (check here for more details: https://github.com/mas-cli/mas/issues/164)${COLOR_RESET}"
+        echo -e "${ORANGE}Please login using the App Store interface.${COLOR_RESET}"
+        echo -e "${ORANGE}Come back here when it's done, this script is waiting for you.${COLOR_RESET}"
         mas open
         read -p "Just press enter to resume"
     else
