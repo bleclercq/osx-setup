@@ -2,5 +2,5 @@ language: bash
 os: osx
 osx_image: xcode11.2
 script:
-- "./brew_setup/tests/"
+- "cd ./brew_setup/tests/"
 - "./test_brew_installation.sh"
