@@ -7,12 +7,12 @@ COLOR_RESET="\033[0m"
 
 function update_os_x_apps {
     mas signout
-    os_x_version=$(sw_vers -productVersion)
-    last_os_x_working_mas_signin=10.13.0
+    local os_x_version=$(sw_vers -productVersion)
+    local last_os_x_working_mas_signin=10.13.0
 
     read -p "Do you want to update your mac's apps? (y/n) " do_update_raw
 
-    do_update_answer=$(tr "[:upper:]" "[:lower:]"<<<${do_update_raw})
+    local do_update_answer=$(tr "[:upper:]" "[:lower:]"<<<${do_update_raw})
 
     if [[ $do_update_answer == "y" ]]; then
         :
@@ -22,7 +22,7 @@ function update_os_x_apps {
 
     read -p "Do you have an apple account? (y/n) " apple_account_raw
     # Assuming bash version < 4 because default; reason: os x bash version is 3.2
-    apple_account=$(tr "[:upper:]" "[:lower:]"<<<${apple_account_raw})
+    local apple_account=$(tr "[:upper:]" "[:lower:]"<<<${apple_account_raw})
 
     if [[ $apple_account == "y" ]]; then
         :
@@ -34,7 +34,7 @@ function update_os_x_apps {
 
     # Check if the current system <major_version.minor_version> is > than 10.13
     # {...%.*} allow to convert xx.xx.xx into a float to make a comparison using bc
-    result=`bc -l <<< "${os_x_version%.*}>${last_os_x_working_mas_signin%.*}"`
+    local result=`bc -l <<< "${os_x_version%.*}>${last_os_x_working_mas_signin%.*}"`
     if [ result ]; then
         echo -e "${ORANGE}Your Mac version is too high (check here for more details: https://github.com/mas-cli/mas/issues/164)${COLOR_RESET}"
         echo -e "${ORANGE}Please login using the App Store interface.${COLOR_RESET}"

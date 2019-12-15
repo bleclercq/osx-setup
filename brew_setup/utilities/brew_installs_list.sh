@@ -1,8 +1,9 @@
 #!/bin/bash
 
 function brew_install_list() {
-    list_of_installation="$1"
-    type_of_install="$2"
+    local type_of_install="$1"
+    shift
+    local list_of_installation=("$@")
     if [[ $type_of_install == "formulaes" ]] ; then
         for item in "${list_of_installation[@]}"; do
             brew install "$item"

@@ -27,10 +27,6 @@ raw_list_of_nice_to_have_casks=$(cat ./casks/nice_to_have.txt | tr "\n" " ")
 list_of_nice_to_have_casks=($raw_list_of_nice_to_have_casks)
 nice_to_have "${list_of_nice_to_have_casks[@]}"
 
-raw_list_of_sudo_needed_casks=$(cat ./casks/nice_to_have.txt | tr "\n" " ")
-list_of_sudo_needed_casks=($raw_list_of_sudo_needed_casks)
-sudo_needed "${list_of_sudo_needed_casks[@]}"
-
 echo -e "${GREEN}Cleaning up${COLOR_RESET}"
 brew cleanup
 rm -rf "$(brew --cache)"

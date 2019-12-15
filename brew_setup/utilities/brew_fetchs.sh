@@ -1,11 +1,10 @@
 #!/bin/bash
 
 function brew_fetch_list() {
-    list_of_downloads=("$1")
-    type_of_install="$2"
-    echo $list_of_downloads
-    echo $type_of_install
-    fetch=""
+    local type_of_install="$1"
+    shift
+    local list_of_downloads=("$@")
+    local fetch=""
     if [[ $type_of_install == "formulaes" ]] ; then
         for item in "${list_of_downloads[@]}"; do
             fetch+="brew fetch "$item" & "
@@ -15,6 +14,6 @@ function brew_fetch_list() {
             fetch+="brew cask fetch "$item" & "
         done
     fi
-    final_fetch="${fetch%??}"
+    local final_fetch="${fetch%??}"
     eval $final_fetch
 }
