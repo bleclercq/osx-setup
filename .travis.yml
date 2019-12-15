@@ -5,4 +5,3 @@ sudo: "required"
 script:
 - "cd ./brew_setup/tests/"
 - "./test_brew_installation.sh"
-- "sudo ./test_brew_cask_sudo_needed_installation.sh"
