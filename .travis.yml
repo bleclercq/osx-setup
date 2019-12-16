@@ -3,5 +3,7 @@ os: osx
 osx_image: xcode11.2
 sudo: "required"
 script:
-- "cd ./brew_setup/tests/"
-- "./test_brew_installation.sh"
+- "cd ./vscode_setup/"
+- "./add_code_alias"
+  #- "cd ./brew_setup/tests/"
+#- "./test_brew_installation.sh"
