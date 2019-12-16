@@ -19,3 +19,4 @@ function casks_fetch_and_install {
     brew_install_list "casks" "${list_of_casks[@]}" > /dev/null 2>&1
     printf "%s " "${list_of_casks[@]}" | tr "\n" " " | sort
 }
+
