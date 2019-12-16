@@ -1,9 +1,7 @@
 #!/bin/bash
 
-source ./utilities/brew_installs_list.sh
-source ./utilities/brew_fetchs.sh
-
-# TODO ADD A WAY TO BREW UPGRADE OUTDATED PACKAGES
+source ./utilities/brew_install_list.sh
+source ./utilities/brew_fetch.sh
 
 function formulaes_fetch_and_install {
     local raw_list_of_formulaes=$(find ./formulaes/ -type f ! -name "nice_to_have.txt" | xargs cat)
