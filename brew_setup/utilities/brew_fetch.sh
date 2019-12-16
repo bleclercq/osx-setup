@@ -5,12 +5,12 @@ function brew_fetch_list() {
     shift
     local list_of_downloads=("$@")
     local fetch=""
-    if [[ $type_of_install == "formulaes" ]] ; then
+    if [[ $type_of_install == "formulaes" ]]; then
         for item in "${list_of_downloads[@]}"; do
             fetch+="brew fetch "$item" & "
         done
     else
-        for item in "${list_of_cask[@]}"; do
+        for item in "${list_of_downloads[@]}"; do
             fetch+="brew cask fetch "$item" & "
         done
     fi

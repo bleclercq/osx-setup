@@ -23,9 +23,7 @@ formulaes_fetch_and_install
 echo -e "${GREEN}Installing casks${COLOR_RESET}"
 casks_fetch_and_install
 
-raw_list_of_nice_to_have_casks=$(cat ./casks/nice_to_have.txt | tr "\n" " ")
-list_of_nice_to_have_casks=($raw_list_of_nice_to_have_casks)
-nice_to_have "${list_of_nice_to_have_casks[@]}"
+nice_to_have
 
 echo -e "${GREEN}Cleaning up${COLOR_RESET}"
 brew cleanup
@@ -45,4 +43,4 @@ echo -e "\nIf anything is missing, please search here:"
 echo -e "https://formulae.brew.sh/"
 echo -e "Here is another resourceful link, check it out:"
 echo -e "https://github.com/jaywcjlove/awesome-mac"
-echo -e "If you can, open a Pull Request, other people might have the same need as yours."
+echo -e "If you want to improve the list, the project or if you have a bug, please open a Pull Request, other people might have the same need as yours."
