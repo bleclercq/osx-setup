@@ -25,6 +25,9 @@ casks_fetch_and_install
 
 nice_to_have
 
+# This install the latest virtualbox compatible with vagrant at this moment (6.0) 
+brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/7e703e0466a463fe26ab4e253e28baa9c20d5f36/Casks/virtualbox.rb
+
 echo -e "${GREEN}Cleaning up${COLOR_RESET}"
 brew cleanup
 rm -rf "$(brew --cache)"
