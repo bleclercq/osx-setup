@@ -4,6 +4,6 @@ osx_image: xcode11.2
 sudo: "required"
 script:
 - "cd ./vscode_setup/"
-- "./install_vscode_extensions.sh"
+- "zsh ./install_vscode_extensions.sh"
   #- "cd ./brew_setup/tests/"
 #- "./test_brew_installation.sh"
