@@ -9,6 +9,5 @@ iterm2
 keybase
 postman
 slack
-virtualbox
 visual-studio-code
 zoomus

@@ -1,5 +1,7 @@
 language: bash
 os: osx
 osx_image: xcode11.2
+sudo: "required"
 script:
-- "./test_brew_cask_installation.sh"
+- "cd ./brew_setup/tests/"
+- "./test_brew_installation.sh"

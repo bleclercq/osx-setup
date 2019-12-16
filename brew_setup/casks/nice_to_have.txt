@@ -1,5 +1,7 @@
 atom
+docker
 microsoft-office
 spotify
 sublime-text
+virtualbox
 vlc
