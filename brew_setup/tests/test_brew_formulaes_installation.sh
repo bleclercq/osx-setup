@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ..
-source ./utilities/brew_fetch_and_install.sh
+source ./brew_setup/utilities/brew_fetch_and_install.sh
 
 formulaes=$(formulaes_fetch_and_install)
 formulaes_list=($formulaes)
