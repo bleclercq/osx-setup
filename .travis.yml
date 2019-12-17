@@ -3,7 +3,5 @@ os: osx
 osx_image: xcode11.2
 sudo: "required"
 script:
-- "brew cask install visual-studio-code"
-- "./vscode_setup/vscode_extensions_installation.sh"
-  #- "cd ./brew_setup/tests/"
-#- "./test_brew_installation.sh"
+    - "./brew_setup/tests/test_brew_installation.sh"
+    - "./vscode_setup/tests/test_vscode_extensions_installation.sh"

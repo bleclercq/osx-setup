@@ -8,7 +8,7 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 EOF
 
     source ~/.zshrc > /dev/null 2>&1
-    local raw_list_of_extensions=$(find ./vscode_setup/ -type f  -name "extensions.txt" | xargs cat)
+    local raw_list_of_extensions=$(find ./vscode_setup/extensions/ -type f -name "extensions.txt" | xargs cat)
     local list_of_extensions=($raw_list_of_extensions)
     
     for item in "${list_of_extensions[@]}"; do

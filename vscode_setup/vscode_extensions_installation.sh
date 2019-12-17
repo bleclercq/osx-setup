@@ -14,5 +14,3 @@ function install_vscode_extensions() {
     fi
     echo "You can now use: `code` as a visual studio code alias in your terminal."
 }
-
-install_vscode_extensions
