@@ -9,6 +9,8 @@ function brew_install_list() {
             brew install "$item"
         done
     else
+        echo "They require sudo priviledge (application's installer)."
+        echo "Reminder: Your sudo password is your current mac user password (if you haven't change you sudo)"
         for item in "${list_of_installation[@]}"; do
             brew cask install --appdir="/Applications" "$item"
         done

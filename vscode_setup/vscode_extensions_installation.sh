@@ -13,4 +13,6 @@ function install_vscode_extensions() {
         install_extensions_with_bash
     fi
     echo "You can now use: `code` as a visual studio code alias in your terminal."
+    echo "The following have been installed:"
+    code --list-extensions
 }
