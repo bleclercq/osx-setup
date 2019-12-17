@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./test_brew_formulaes_installation.sh
+./brew_setup/tests/test_brew_formulaes_installation.sh
