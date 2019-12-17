@@ -5,6 +5,6 @@ sudo: "required"
 script:
 - "cd ./vscode_setup/"
 - "brew cask install visual-studio-code"
-- "zsh ./install_vscode_extensions.sh"
+- "./vscode_extensions_installation.sh"
   #- "cd ./brew_setup/tests/"
 #- "./test_brew_installation.sh"
