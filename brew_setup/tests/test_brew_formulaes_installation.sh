@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 source ./brew_setup/utilities/brew_fetch_and_install.sh
 
 formulaes=$(formulaes_fetch_and_install)
