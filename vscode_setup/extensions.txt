@@ -16,5 +16,6 @@ ms-vsliveshare.vsliveshare
 shd101wyy.markdown-preview-enhanced
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
+wayou.vscode-todo-highlight
 wengerk.highlight-bad-chars
 yzhang.markdown-all-in-one
