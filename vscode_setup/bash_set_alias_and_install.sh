@@ -11,6 +11,8 @@ EOF
     local raw_list_of_extensions=$(find ./vscode_setup/ -type f -name "extensions.txt" | xargs cat)
     local list_of_extensions=($raw_list_of_extensions)
     for item in "${list_of_extensions[@]}"; do
-        code --install-extension "$item"
+        code --install-extension "$item" > /dev/null 2>&1
     done
+    echo "The following have been installed:"
+    printf "%s " "${list_of_extensions[@]}" | tr "\n" " " | sort -n
 }
