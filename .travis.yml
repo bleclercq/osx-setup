@@ -3,5 +3,10 @@ os: osx
 osx_image: xcode11.2
 sudo: "required"
 script:
+<<<<<<< HEAD
     - "./brew_setup/tests/test_brew_installation.sh"
     - "./vscode_setup/tests/test_vscode_extensions_installation.sh"
+=======
+- "cd ./brew_setup/tests/"
+- "./test_brew_installation.sh"
+>>>>>>> bab75395df4868064db6296e94c87dbc661ffffb

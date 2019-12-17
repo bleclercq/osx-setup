@@ -1,5 +1,13 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
+GREEN="\033[0;32m"
+ORANGE="\033[0;33m"
+RED="\033[0;31m"
+COLOR_RESET="\033[0m"
+
+>>>>>>> bab75395df4868064db6296e94c87dbc661ffffb
 function update_os_x_apps {
     mas signout
     local os_x_version=$(sw_vers -productVersion)

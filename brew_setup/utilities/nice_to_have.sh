@@ -1,10 +1,18 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 source ./brew_setup/utilities/brew_install_list.sh
 source ./brew_setup/utilities/brew_fetch.sh
 
 function nice_to_have() {
     local raw_list_of_nice_to_have=$(cat ./brew_setup/casks/nice_to_have.txt | tr "\n" " ")
+=======
+source ./utilities/brew_install_list.sh
+source ./utilities/brew_fetch.sh
+
+function nice_to_have() {
+    local raw_list_of_nice_to_have=$(cat ./casks/nice_to_have.txt | tr "\n" " ")
+>>>>>>> bab75395df4868064db6296e94c87dbc661ffffb
     local list_of_nice_to_have=($raw_list_of_nice_to_have)
     echo "Here is a list of nice to have:"
     printf "%s\n" "${list_of_nice_to_have[@]}"
