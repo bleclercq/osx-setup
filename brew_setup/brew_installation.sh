@@ -5,7 +5,6 @@ GREEN="\033[0;32m"
 ORANGE="\033[0;33m"
 COLOR_RESET="\033[0m"
 
-# TODO Add a global progress bar
 
 function install_brew_extensions() {
     echo -e "${GREEN}Installing XCode${COLOR_RESET}"
@@ -16,13 +15,13 @@ function install_brew_extensions() {
     source ./brew_setup/utilities/brew_fetch_and_install.sh
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    
+    # TODO Check here that no other brew process is already running
     brew update
     brew upgrade
 
     update_os_x_apps
-    echo -e "${GREEN}Installing formulaes${COLOR_RESET}"
     formulaes_fetch_and_install
-    echo -e "${GREEN}Installing casks${COLOR_RESET}"
     casks_fetch_and_install
 
     nice_to_have
