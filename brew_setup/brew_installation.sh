@@ -5,7 +5,6 @@ GREEN="\033[0;32m"
 ORANGE="\033[0;33m"
 COLOR_RESET="\033[0m"
 
-# TODO Add a global progress bar
 
 function install_brew_extensions() {
     echo -e "${GREEN}Installing XCode${COLOR_RESET}"
@@ -16,13 +15,13 @@ function install_brew_extensions() {
     source ./brew_setup/utilities/brew_fetch_and_install.sh
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    
+    # TODO Check here that no other brew process is already running
     brew update
     brew upgrade
 
     update_os_x_apps
-    echo -e "${GREEN}Installing formulaes${COLOR_RESET}"
     formulaes_fetch_and_install
-    echo -e "${GREEN}Installing casks${COLOR_RESET}"
     casks_fetch_and_install
 
     nice_to_have
@@ -30,7 +29,7 @@ function install_brew_extensions() {
     # This install the latest virtualbox compatible with vagrant at this moment (6.0) 
     brew cask install https://raw.githubusercontent.com/Homebrew/homebrew-cask/7e703e0466a463fe26ab4e253e28baa9c20d5f36/Casks/virtualbox.rb
 
-    # TODO ASK if they want the cleanup as it destroy a folder 
+    # TODO ASK if they want the cleanup as it destroy a folder and need root priviledges to be recreated
 
     echo -e "${GREEN}Cleaning up${COLOR_RESET}"
     brew cleanup
