@@ -14,7 +14,7 @@ function brew_install_list() {
             i=$((i+100/${#list_of_installation[@]}))
         done
     else
-        echo "They require sudo priviledge (application's installer)."
+        echo "Casks require sudo priviledge (because of the application's installer)."
         echo "Reminder: Your sudo password is your current mac user password (if you haven't change you sudo)"
         for cask in "${list_of_installation[@]}"; do
             progress_bar "$i" "$cask" is installing...
