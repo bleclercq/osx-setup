@@ -19,7 +19,7 @@ function casks_fetch_and_install {
     local list_of_casks=($raw_list_of_cask)
     echo -e "${GREEN}Fetching casks${COLOR_RESET}" >&2
     brew_fetch_list "casks" "${list_of_casks[@]}" > /dev/null 2>&1
-    echo -e "${GREEN}Installing formulaes${COLOR_RESET}" >&2
+    echo -e "${GREEN}Installing casks${COLOR_RESET}" >&2
     brew_install_list "casks" "${list_of_casks[@]}"
     printf "%s " "${list_of_casks[@]}" | tr "\n" " " | sort -n
 }
