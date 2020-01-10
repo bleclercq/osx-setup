@@ -2,6 +2,8 @@
 
 # TODO CHECK THAT VS CODE IS ALREADY INSTALLED...
 
+# TODO Fix this as apple doesn't seems to allowed the install by default, is some condition needs to be met to have this directly working?
+
 function install_vscode_extensions() {
     local current_shell="$SHELL"
 
