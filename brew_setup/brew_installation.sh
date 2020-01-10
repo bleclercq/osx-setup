@@ -15,14 +15,15 @@ function install_brew_extensions() {
     source ./brew_setup/utilities/brew_fetch_and_install.sh
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    
+
     # TODO Check here that no other brew process is already running
     brew update
     brew upgrade
+    brew cask upgrade
 
-    update_os_x_apps
     formulaes_fetch_and_install
     casks_fetch_and_install
+    update_os_x_apps
 
     nice_to_have
 
